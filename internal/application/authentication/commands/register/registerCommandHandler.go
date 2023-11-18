@@ -7,7 +7,6 @@ import (
 	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
 	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
 	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
-	"github.com/google/uuid"
 	"github.com/mehdihadeli/go-mediatr"
 )
 
@@ -47,9 +46,10 @@ func (c *RegisterUserCommandHandler) Handle(ctx context.Context, command *Regist
 	}
 
 	r := &RegisterUserCommandResponse{
-		Id:        uuid.New(),
-		UserName:  command.UserName,
-		CreatedAt: c.DateTimeProvider.DateTime(),
+		Id:        u.Id().Value(),
+		UserName:  u.UserName(),
+		CreatedAt: u.CreatedAt(),
+		UpdatedAt: u.UpdatedAt(),
 	}
 
 	return r, nil

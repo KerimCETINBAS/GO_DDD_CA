@@ -12,8 +12,11 @@ type MockUserRepository struct {
 }
 
 // Create implements persistence.IUserRepository.
-func (*MockUserRepository) Create(User) error {
-	panic("unimplemented")
+func (m *MockUserRepository) Create(user User) error {
+
+	args := m.Called(user)
+
+	return args.Error(0)
 }
 
 // GetAll implements persistence.IUserRepository.

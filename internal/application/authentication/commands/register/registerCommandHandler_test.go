@@ -8,10 +8,13 @@ import (
 	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
 	. "gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
 	"gihub.com/kerimcetinbas/go_ddd_ca/domain/auth"
+	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 	"gihub.com/kerimcetinbas/go_ddd_ca/infrastructure/services"
 	"github.com/joho/godotenv"
-	mock "github.com/kerimcetinbas/go_ddd_ca/mocks"
+	mocks "github.com/kerimcetinbas/go_ddd_ca/mocks"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 	"go.uber.org/dig"
 )
 
@@ -33,12 +36,12 @@ func TestRegisterCommandHandler(t *testing.T) {
 	// 	},
 	// )
 
-	mockRepo := new(mock.MockUserRepository)
+	mockRepo := new(mocks.MockUserRepository)
 	c.Provide(func() persistence.IUserRepository {
 		return mockRepo
 	})
-	c.Provide(func(dateProvider IDateTimeProvider, userRepo persistence.IUserRepository) *RegisterUserCommandHandler {
-		return &RegisterUserCommandHandler{
+	c.Provide(func(dateProvider IDateTimeProvider, userRepo persistence.IUserRepository) RegisterUserCommandHandler {
+		return RegisterUserCommandHandler{
 			DateTimeProvider: dateProvider,
 			userRespository:  userRepo,
 		}
@@ -50,12 +53,24 @@ func TestRegisterCommandHandler(t *testing.T) {
 	})
 
 	t.Run("Should register user", func(t *testing.T) {
-		c.Invoke(func(handler *RegisterUserCommandHandler) {
-			_, err := handler.Handle(context.Background(), &RegisterUserCommand{
+		c.Invoke(func(handler RegisterUserCommandHandler) {
+
+			r := &RegisterUserCommand{
 				UserName: "jhond",
 				Email:    "jdoe@example.com",
 				Password: []byte("1234"),
-			})
+			}
+			u := user_domain.NewUser(
+				r.Email,
+				r.UserName,
+				r.Password,
+				make([]user_valueobject.FriendIdValueObject, 0),
+			)
+
+			mockRepo.On("Create", mock.MatchedBy(func(s user_domain.User) bool {
+				return s.UserName() == u.UserName()
+			})).Return(nil)
+			_, err := handler.Handle(context.Background(), r)
 
 			assert.Nil(t, err)
 
