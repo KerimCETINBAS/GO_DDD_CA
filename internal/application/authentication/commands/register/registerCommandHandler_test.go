@@ -8,7 +8,6 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
 	. "github.com/kerimcetinbas/go_ddd_ca/application/common/services"
-	"github.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
 	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 	"github.com/kerimcetinbas/go_ddd_ca/infrastructure/services"
@@ -24,9 +23,7 @@ func TestRegisterCommandHandler(t *testing.T) {
 	fmt.Println(err)
 	c := dig.New()
 
-	c.Provide(auth.PasetoTokenSettingsProvider)
 	c.Provide(services.UseDateTimeProvider)
-	c.Provide(services.UsePasetoProvider)
 	// user := user_domain.NewUser(
 	// 	"jdoe@example.com",
 	// 	"jhond",
@@ -40,10 +37,10 @@ func TestRegisterCommandHandler(t *testing.T) {
 	c.Provide(func() persistence.IUserRepository {
 		return mockRepo
 	})
-	c.Provide(func(dateProvider IDateTimeProvider, userRepo persistence.IUserRepository) RegisterUserCommandHandler {
+	c.Provide(func(dateProvider IDateTimeProvider) RegisterUserCommandHandler {
 		return RegisterUserCommandHandler{
 			DateTimeProvider: dateProvider,
-			userRespository:  userRepo,
+			userRespository:  mockRepo,
 		}
 	})
 	t.Run("Should have user repository", func(t *testing.T) {

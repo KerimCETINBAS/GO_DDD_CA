@@ -15,14 +15,14 @@ type LoginUserQueryHandlerType = mediatr.RequestHandler[*LoginUserQuery, *LoginU
 
 type LoginUserQueryHandler struct {
 	dateTimeProvider services.IDateTimeProvider
-	tokenGenerator   auth.IPasetoTokenGenerator
+	tokenProvider    auth.ITokenProvider
 	userRepository   persistence.IUserRepository
 }
 
 type LoginUserQueryParams struct {
 	dig.In
 	DateTimeProvider services.IDateTimeProvider
-	TokenGenerator   auth.IPasetoTokenGenerator
+	TokenGenerator   auth.ITokenProvider
 	UserRepository   persistence.IUserRepository
 }
 
@@ -31,7 +31,7 @@ func Provider(
 ) LoginUserQueryHandlerType {
 	return &LoginUserQueryHandler{
 		dateTimeProvider: services.DateTimeProvider,
-		tokenGenerator:   services.TokenGenerator,
+		tokenProvider:    services.TokenGenerator,
 		userRepository:   services.UserRepository,
 	}
 }
@@ -55,7 +55,7 @@ func (h *LoginUserQueryHandler) Handle(
 		return &LoginUserQueryResponse{}, domain_errors.ThrowError().ERR_PasswordDoesNotMatchException
 	}
 
-	token, err := h.tokenGenerator.GenerateAccessToken(user)
+	token, err := h.tokenProvider.GenerateAccessToken(user)
 
 	if err != nil {
 		return &LoginUserQueryResponse{}, domain_errors.ThrowError().ERR_MalformedEntityException

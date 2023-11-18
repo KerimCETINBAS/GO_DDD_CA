@@ -12,8 +12,7 @@ func AddInfrastructure(container *dig.Container) {
 
 	services.UseEnvProvider(container)
 
-	container.Provide(services.UsePasetoProvider)
+	container.Provide(services.UsePasetoTokenProvider)
 	container.Provide(services.UseDateTimeProvider)
-
 	container.Invoke(memory.UseMemoryProviders)
 }

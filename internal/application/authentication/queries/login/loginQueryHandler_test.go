@@ -29,7 +29,7 @@ func TestRegisterCommandHandler(t *testing.T) {
 	c.Provide(func(dateProvider IDateTimeProvider) *LoginUserQueryHandler {
 		return &LoginUserQueryHandler{
 			dateTimeProvider: dateProvider,
-			tokenGenerator:   mockTokenProvider,
+			tokenProvider:    mockTokenProvider,
 			userRepository:   mockRepo,
 		}
 	})

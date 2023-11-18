@@ -10,18 +10,18 @@ import (
 	"github.com/o1egl/paseto"
 )
 
-type pasetoProvider struct {
+type pasetoTokenProvider struct {
 	settigns PasetoTokenSettings
 }
 
-func UsePasetoProvider(settings PasetoTokenSettings) IPasetoTokenGenerator {
-	return &pasetoProvider{
+func UsePasetoTokenProvider(settings PasetoTokenSettings) ITokenProvider {
+	return &pasetoTokenProvider{
 		settigns: settings,
 	}
 }
 
 // GenerateToken implements interfaces_authentication.IPasetoTokenGenerator.
-func (p *pasetoProvider) GenerateAccessToken(user User) (string, error) {
+func (p *pasetoTokenProvider) GenerateAccessToken(user User) (string, error) {
 
 	payload := PasetoPayload{
 		JSONToken: paseto.JSONToken{
@@ -37,7 +37,7 @@ func (p *pasetoProvider) GenerateAccessToken(user User) (string, error) {
 	return paseto.NewV2().Encrypt(p.settigns.Access.SymmetricKey, payload, nil)
 }
 
-func (p *pasetoProvider) GenerateRefreshToken(user User) (string, error) {
+func (p *pasetoTokenProvider) GenerateRefreshToken(user User) (string, error) {
 	payload := PasetoPayload{
 		JSONToken: paseto.JSONToken{
 			Jti:        uuid.NewString(),
