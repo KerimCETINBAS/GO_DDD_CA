@@ -39,9 +39,9 @@ func ThrowError() ErrorList {
 		ERR_MalformedEntityException:       ERR_MalformedEntityException,
 		ERR_UserDoesNotExistException:      ERR_UserDoesNotExistException,
 		ERR_UserEmailAlreadyExistException: ERR_UserEmailAlreadyExistException,
-		ERR_UserAlreadyExistException:      ERR_UserEmailAlreadyExistException,
-		ERR_PasswordDoesNotMatchException:  ERR_UserEmailAlreadyExistException,
-		ERR_InsufficientAuthorityException: ERR_UserEmailAlreadyExistException,
-		ERR_NoAnonymousAllowedException:    ERR_UserEmailAlreadyExistException,
+		ERR_UserAlreadyExistException:      ERR_UserAlreadyExistException,
+		ERR_PasswordDoesNotMatchException:  ERR_PasswordDoesNotMatchException,
+		ERR_InsufficientAuthorityException: ERR_InsufficientAuthorityException,
+		ERR_NoAnonymousAllowedException:    ERR_NoAnonymousAllowedException,
 	}
 }

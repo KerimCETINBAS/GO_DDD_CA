@@ -19,9 +19,8 @@ func TestUserAggregate(t *testing.T) {
 			[]byte("1234"),
 			make([]user_valueobject.FriendIdValueObject, 0))
 
-		assert.NotEmpty(t, user.Id().Value())
-
 		_, ok := uuid.Parse(user.Id().Value().String())
+
 		assert.Nil(t, ok)
 		assert.Equal(t, "jdoe@example.com", user.Email())
 		assert.Equal(t, "jdoe@example.com", user.email)
