@@ -3,11 +3,11 @@ package auth_handler
 import (
 	"errors"
 
-	auth_contract "gihub.com/kerimcetinbas/go_ddd_ca/Contracts/auth"
-	register_command "gihub.com/kerimcetinbas/go_ddd_ca/application/authentication/commands/register"
-	login_query "gihub.com/kerimcetinbas/go_ddd_ca/application/authentication/queries/login"
-	domain_errors "gihub.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
 	"github.com/gofiber/fiber/v2"
+	auth_contract "github.com/kerimcetinbas/go_ddd_ca/Contracts/auth"
+	register_command "github.com/kerimcetinbas/go_ddd_ca/application/authentication/commands/register"
+	login_query "github.com/kerimcetinbas/go_ddd_ca/application/authentication/queries/login"
+	domain_errors "github.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
 	"github.com/mehdihadeli/go-mediatr"
 	"go.uber.org/dig"
 )

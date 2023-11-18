@@ -1,8 +1,8 @@
 package persistence
 
 import (
-	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 )
 
 type IUserRepository interface {

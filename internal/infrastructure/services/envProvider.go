@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
 	"github.com/joho/godotenv"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/services"
 	"go.uber.org/dig"
 )
 

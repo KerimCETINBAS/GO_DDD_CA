@@ -1,4 +1,4 @@
-module gihub.com/kerimcetinbas/go_ddd_ca/Contracts
+module github.com/kerimcetinbas/go_ddd_ca/Contracts
 
 go 1.21.4
 

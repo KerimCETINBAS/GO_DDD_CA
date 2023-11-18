@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/infrastructure/persistence/memory"
-	"gihub.com/kerimcetinbas/go_ddd_ca/infrastructure/services"
+	"github.com/kerimcetinbas/go_ddd_ca/infrastructure/persistence/memory"
+	"github.com/kerimcetinbas/go_ddd_ca/infrastructure/services"
 	"go.uber.org/dig"
 )
 

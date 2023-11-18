@@ -1,4 +1,4 @@
-module gihub.com/kerimcetinbas/go_ddd_ca/application
+module github.com/kerimcetinbas/go_ddd_ca/application
 
 go 1.21.4
 

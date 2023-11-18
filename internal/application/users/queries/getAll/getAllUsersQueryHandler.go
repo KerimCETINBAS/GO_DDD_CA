@@ -3,7 +3,7 @@ package users_getall_query
 import (
 	"context"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
 	"github.com/mehdihadeli/go-mediatr"
 )
 

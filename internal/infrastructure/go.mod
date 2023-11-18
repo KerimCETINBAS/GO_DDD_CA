@@ -1,4 +1,4 @@
-module gihub.com/kerimcetinbas/go_ddd_ca/infrastructure
+module github.com/kerimcetinbas/go_ddd_ca/infrastructure
 
 go 1.21.4
 

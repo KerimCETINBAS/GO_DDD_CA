@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	auth_handler "gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers/auth"
-	user_handler "gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers/users"
+	auth_handler "github.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers/auth"
+	user_handler "github.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers/users"
 	"go.uber.org/dig"
 )
 

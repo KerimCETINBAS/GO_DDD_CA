@@ -3,10 +3,10 @@ package login_query
 import (
 	"context"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/interfaces/auth"
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
-	domain_errors "gihub.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/interfaces/auth"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/services"
+	domain_errors "github.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
 	"github.com/mehdihadeli/go-mediatr"
 	"go.uber.org/dig"
 )

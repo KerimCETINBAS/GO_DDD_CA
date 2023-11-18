@@ -1,9 +1,9 @@
 package user_handler
 
 import (
-	users_getall_command "gihub.com/kerimcetinbas/go_ddd_ca/application/users/queries/getAll"
-	"gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest/middlewares"
 	"github.com/gofiber/fiber/v2"
+	users_getall_command "github.com/kerimcetinbas/go_ddd_ca/application/users/queries/getAll"
+	"github.com/kerimcetinbas/go_ddd_ca/presentation/rest/middlewares"
 	"github.com/mehdihadeli/go-mediatr"
 	"go.uber.org/dig"
 )

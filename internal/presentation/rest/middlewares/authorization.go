@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	"github.com/gofiber/fiber/v2"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/auth"
 )
 
 type IAuthMiddleware interface {

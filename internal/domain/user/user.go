@@ -1,9 +1,9 @@
 package user_domain
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/domain/common/models"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 	"github.com/google/uuid"
+	"github.com/kerimcetinbas/go_ddd_ca/domain/common/models"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 )
 
 type User struct {

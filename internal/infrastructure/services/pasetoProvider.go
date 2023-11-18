@@ -3,10 +3,10 @@ package services
 import (
 	"time"
 
-	. "gihub.com/kerimcetinbas/go_ddd_ca/application/common/interfaces/auth"
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/auth"
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
 	"github.com/google/uuid"
+	. "github.com/kerimcetinbas/go_ddd_ca/application/common/interfaces/auth"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/auth"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/user"
 	"github.com/o1egl/paseto"
 )
 

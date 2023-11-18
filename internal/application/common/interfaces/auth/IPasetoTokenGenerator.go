@@ -1,7 +1,7 @@
 package auth
 
 import (
-	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
 )
 
 type IPasetoTokenGenerator interface {

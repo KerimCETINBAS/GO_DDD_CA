@@ -3,7 +3,7 @@ package services
 import (
 	"time"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/services"
 )
 
 type dateTime struct{}

@@ -1,9 +1,9 @@
 package presentation
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest"
-	"gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers"
-	"gihub.com/kerimcetinbas/go_ddd_ca/presentation/rest/middlewares"
+	"github.com/kerimcetinbas/go_ddd_ca/presentation/rest"
+	"github.com/kerimcetinbas/go_ddd_ca/presentation/rest/handlers"
+	"github.com/kerimcetinbas/go_ddd_ca/presentation/rest/middlewares"
 	"go.uber.org/dig"
 )
 

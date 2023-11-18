@@ -1,4 +1,4 @@
-module gihub.com/kerimcetinbas/go_ddd_ca/domain
+module github.com/kerimcetinbas/go_ddd_ca/domain
 
 go 1.21.4
 

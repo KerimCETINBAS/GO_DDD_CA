@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
-	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 
 	mock "github.com/kerimcetinbas/go_ddd_ca/mocks"
 	"github.com/stretchr/testify/assert"

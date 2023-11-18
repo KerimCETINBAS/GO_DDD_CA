@@ -1,11 +1,11 @@
 package main
 
 import (
-	application "gihub.com/kerimcetinbas/go_ddd_ca/application"
-	domain "gihub.com/kerimcetinbas/go_ddd_ca/domain"
-	"gihub.com/kerimcetinbas/go_ddd_ca/infrastructure"
-	presentation "gihub.com/kerimcetinbas/go_ddd_ca/presentation"
 	"github.com/gofiber/fiber/v2"
+	application "github.com/kerimcetinbas/go_ddd_ca/application"
+	domain "github.com/kerimcetinbas/go_ddd_ca/domain"
+	"github.com/kerimcetinbas/go_ddd_ca/infrastructure"
+	presentation "github.com/kerimcetinbas/go_ddd_ca/presentation"
 	"go.uber.org/dig"
 )
 

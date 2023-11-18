@@ -3,10 +3,10 @@ package register_command
 import (
 	"context"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/services"
-	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/services"
+	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 	"github.com/mehdihadeli/go-mediatr"
 )
 

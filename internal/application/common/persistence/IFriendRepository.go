@@ -1,8 +1,8 @@
 package persistence
 
 import (
-	user_entity "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/entities"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	user_entity "github.com/kerimcetinbas/go_ddd_ca/domain/user/entities"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 )
 
 type IFriendRepository interface {

@@ -5,9 +5,9 @@ import (
 	"errors"
 	"time"
 
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	pasetoware "github.com/gofiber/contrib/paseto"
 	"github.com/gofiber/fiber/v2"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	"github.com/o1egl/paseto"
 )
 

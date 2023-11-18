@@ -1,9 +1,9 @@
 package application
 
 import (
-	register_command "gihub.com/kerimcetinbas/go_ddd_ca/application/authentication/commands/register"
-	login_query "gihub.com/kerimcetinbas/go_ddd_ca/application/authentication/queries/login"
-	users_getall_query "gihub.com/kerimcetinbas/go_ddd_ca/application/users/queries/getAll"
+	register_command "github.com/kerimcetinbas/go_ddd_ca/application/authentication/commands/register"
+	login_query "github.com/kerimcetinbas/go_ddd_ca/application/authentication/queries/login"
+	users_getall_query "github.com/kerimcetinbas/go_ddd_ca/application/users/queries/getAll"
 	"go.uber.org/dig"
 )
 

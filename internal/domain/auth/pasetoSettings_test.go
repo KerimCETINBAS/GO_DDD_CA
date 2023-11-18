@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	"github.com/joho/godotenv"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/auth"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/dig"
 )

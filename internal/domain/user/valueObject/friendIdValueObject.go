@@ -1,8 +1,8 @@
 package user_valueobject
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/domain/common/models"
 	"github.com/google/uuid"
+	"github.com/kerimcetinbas/go_ddd_ca/domain/common/models"
 )
 
 type FriendIdValueObject struct {

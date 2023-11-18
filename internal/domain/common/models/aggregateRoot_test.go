@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/common/models"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/common/models"
 	"github.com/stretchr/testify/assert"
 )
 

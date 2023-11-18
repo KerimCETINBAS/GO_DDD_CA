@@ -1,9 +1,9 @@
-package mock
+package mocks
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
-	. "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/user"
+	. "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 	"github.com/stretchr/testify/mock"
 )
 
@@ -22,13 +22,14 @@ func (m *MockUserRepository) Create(user User) error {
 // GetAll implements persistence.IUserRepository.
 func (m *MockUserRepository) GetAll() ([]User, error) {
 	args := m.Called()
-
 	return args.Get(0).([]User), args.Error(1)
 }
 
 // GetByEmail implements persistence.IUserRepository.
-func (*MockUserRepository) GetByEmail(email string) (User, error) {
-	panic("unimplemented")
+func (m *MockUserRepository) GetByEmail(email string) (User, error) {
+	args := m.Called(email)
+
+	return args.Get(0).(User), args.Error(1)
 }
 
 // GetById implements persistence.IUserRepository.

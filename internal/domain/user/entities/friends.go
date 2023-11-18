@@ -1,8 +1,8 @@
 package user_entity
 
 import (
-	"gihub.com/kerimcetinbas/go_ddd_ca/domain/common/models"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	"github.com/kerimcetinbas/go_ddd_ca/domain/common/models"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 )
 
 type Friend struct {

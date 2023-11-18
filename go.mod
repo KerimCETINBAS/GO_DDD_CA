@@ -1,10 +1,13 @@
-module gihub.com/kerimcetinbas/go_ddd_ca
+module github.com/kerimcetinbas/go_ddd_ca
 
 go 1.21.4
 
+
+replace github.com/kerimcetinbas/go_ddd_ca/domain => ./internal/domain
 require go.uber.org/dig v1.17.1
 
 require (
+	github.com/kerimcetinbas/go_ddd_ca/domain v1.0.0
 	github.com/andybalholm/brotli v1.0.6 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.4.0 // indirect

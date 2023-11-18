@@ -3,10 +3,10 @@ package memory
 import (
 	"sync"
 
-	"gihub.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
-	domain_errors "gihub.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
-	user_domain "gihub.com/kerimcetinbas/go_ddd_ca/domain/user"
-	user_valueobject "gihub.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
+	"github.com/kerimcetinbas/go_ddd_ca/application/common/persistence"
+	domain_errors "github.com/kerimcetinbas/go_ddd_ca/domain/common/Errors"
+	user_domain "github.com/kerimcetinbas/go_ddd_ca/domain/user"
+	user_valueobject "github.com/kerimcetinbas/go_ddd_ca/domain/user/valueObject"
 )
 
 type userRepository struct {
