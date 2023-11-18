@@ -1,0 +1,4 @@
+@BASE=http://localhost:8080
+
+GET {{BASE}}/users
+Content-Type: application/json 

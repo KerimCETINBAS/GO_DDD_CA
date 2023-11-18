@@ -1,0 +1,10 @@
+go 1.21.4
+
+use (
+	.
+	./internal/application
+	./internal/contracts
+	./internal/domain
+	./internal/infrastructure
+	./internal/presentation
+)
