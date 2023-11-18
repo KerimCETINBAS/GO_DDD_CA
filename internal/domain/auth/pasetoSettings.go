@@ -22,6 +22,7 @@ type PasetoTokenSettings struct {
 	Refresh TokenSetting
 }
 
+// todo refactor this to be more dynamic and configurable
 func PasetoTokenSettingsProvider() PasetoTokenSettings {
 
 	minAccess, _ := strconv.ParseUint(os.Getenv("PASETO_ACCESS_EXPIRES_TIME_IN_MINUTES"), 10, 64)
